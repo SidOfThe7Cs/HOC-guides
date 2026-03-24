@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Define variables */
+    --mage-color: #4a90e2;
+    --archer-color: #f39c12;
+    --shaman-color: #50c878;
+    --assassin-color: #e74c3c;
+    --warrior-color: #9b59b6;
+
+    --mage-color-faint: rgba(74,144,226,0.1);
+    --archer-color-faint: rgba(243,156,18,0.1);
+    --shaman-color-faint: rgba(80,200,120,0.1);
+    --assassin-color-faint: rgba(231,76,60,0.1);
+    --warrior-color-faint: rgba(155,89,182,0.1);
+
+    --header-color-green: #4ecdc4;
+    --header-color-red: #ff6b6b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--header-color-red);
+}
+
+/* Class Filter Buttons */
+.class-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.class-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #2d2d3a;
+    color: #fff;
+}
+
+.class-btn:hover {
+    transform: translateY(-4px);
+}
+
+.class-btn.active.mage { background: var(--mage-color); }
+.class-btn.active.archer { background: var(--archer-color); }
+.class-btn.active.shaman { background: var(--shaman-color); }
+.class-btn.active.assassin { background: var(--assassin-color); }
+.class-btn.active.warrior { background: var(--warrior-color); }
+
+.class-btn.mage { background: var(--mage-color-faint) }
+.class-btn.archer { background: var(--archer-color-faint) }
+.class-btn.shaman { background: var(--shaman-color-faint) }
+.class-btn.assassin { background: var(--assassin-color-faint) }
+.class-btn.warrior { background: var(--warrior-color-faint) }
+
+/* Raid Selector */
+.raid-selector {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.raid-selector label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#raid-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #2d2d3a;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Guide Content */
+.guide-content {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.loading {
+    text-align: center;
+    color: #888;
+    padding: 50px;
+}
+
+/* Room Sections */
+.room {
+    margin-bottom: 40px;
+}
+
+.room h2 {
+    color: var(--header-color-red);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.room h3 {
+    color: var(--header-color-green);
+    margin: 15px 0 10px 0;
+}
+
+.subsection {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.raid-guide .raid h1 {
+    color: var(--header-color-green);
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+/* Tips */
+.tip {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid;
+    transition: all 0.3s;
+}
+
+.tip.hidden {
+    display: none;
+}
+
+.tip-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tip-icon {
+    font-size: 20px;
+}
+
+/* Class-specific tip styles */
+/* Tip border and background colors */
+.tip.mage { border-left-color: var(--mage-color); background: var(--mage-color-faint); }
+.tip.archer { border-left-color: var(--archer-color); background: var(--archer-color-faint); }
+.tip.shaman { border-left-color: var(--shaman-color); background: var(--shaman-color-faint); }
+.tip.assassin { border-left-color: var(--assassin-color); background: var(--assassin-color-faint); }
+.tip.warrior { border-left-color: var(--warrior-color); background: var(--warrior-color-faint); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .room {
+        padding-left: 15px;
+    }
+    
+    .class-filters {
+        gap: 5px;
+    }
+    
+    .class-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
