@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadGuide(raidId) {
-    fetch(`guides/${raidId}.html`)
+    fetch(`raids/guides/${raidId}.html`)
         .then(response => {
             if (!response.ok) throw new Error('Guide not found');
             return response.text();
@@ -49,7 +49,6 @@ function loadGuide(raidId) {
             document.getElementById('guide-content').innerHTML = `
                 <div class="loading">
                     <p>❌ Error loading guide: ${error.message}</p>
-                    <p>Make sure the guide files exist in the /guides/ folder</p>
                 </div>
             `;
         });
