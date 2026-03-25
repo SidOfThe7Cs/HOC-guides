@@ -1,0 +1,22 @@
+
+:root {
+    /* Define variables */
+    --mage-color: #4a90e2;
+    --archer-color: #f39c12;
+    --shaman-color: #50c878;
+    --assassin-color: #e74c3c;
+    --warrior-color: #9b59b6;
+
+    --mage-color-faint: rgba(74,144,226,0.1);
+    --archer-color-faint: rgba(243,156,18,0.1);
+    --shaman-color-faint: rgba(80,200,120,0.1);
+    --assassin-color-faint: rgba(231,76,60,0.1);
+    --warrior-color-faint: rgba(155,89,182,0.1);
+
+    --header-color-green: #4ecdc4;
+    --header-color-red: #ff6b6b;
+
+    --background-main: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --background-2: rgba(255,255,255,0.05);
+    --background-3: rgba(255,255,255,0.1);
+}

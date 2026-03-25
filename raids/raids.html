@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOC Raid Guides</title>
+    <link rel="stylesheet" href="raid-styles.css">
+    <link rel="stylesheet" href="/colors.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HOC Raid Guides</h1>
+            <p>Select a raid and toggle class-specific tips</p>
+        </header>
+
+        <!-- Class Filter Buttons -->
+        <div class="class-filters">
+            <button class="class-btn active mage" data-class="mage">Mage Tips</button>
+            <button class="class-btn active archer" data-class="archer">Archer Tips</button>
+            <button class="class-btn active shaman" data-class="shaman">Shaman Tips</button>
+            <button class="class-btn active assassin" data-class="assassin">Assassin Tips</button>
+            <button class="class-btn active warrior" data-class="warrior">Warrior Tips</button>
+        </div>
+
+        <!-- Raid Selector -->
+        <div class="raid-selector">
+            <label for="raid-select">Choose a Raid:</label>
+            <select id="raid-select">
+                <option value="">Nest of the Grootslangs</option>
+            </select>
+        </div>
+
+        <!-- Guide Content Area -->
+        <div id="guide-content" class="guide-content">
+            <div class="loading">Select a raid to begin...</div>
+        </div>
+    </div>
+
+    <script src="raid-guide-loader.js"></script>
+</body>
+</html>

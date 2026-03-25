@@ -5,8 +5,34 @@ let activeClasses = new Set(['mage', 'archer', 'shaman', 'assassin', 'warrior'])
 document.addEventListener('DOMContentLoaded', () => {
     const raidSelect = document.getElementById('raid-select');
     const classBtns = document.querySelectorAll('.class-btn');
+
+    // Load the guides list
+    fetch('guides/guides-list.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load guides list');
+            return response.json();
+        })
+        .then(guidesList => {
+            // Populate dropdown
+            raidSelect.innerHTML = '';
+            
+            guidesList.forEach(guide => {
+                const option = document.createElement('option');
+                option.value = guide;
+                option.textContent = guide;
+                raidSelect.appendChild(option);
+            });
+            
+            // Load first guide if available
+            if (guidesList.length > 0) {
+                loadGuide(guidesList[0]);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading guides list:', error);
+        });
     
-    raidSelect.addEventListener('click', () => {
+    raidSelect.addEventListener('change', () => {
         const selectedRaid = raidSelect.value;
         loadGuide(selectedRaid);
     });
@@ -29,13 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             filterTips();
         });
     });
-    
-    // Load default guide
-    loadGuide(raidSelect.value);
 });
 
 function loadGuide(raidId) {
-    fetch(`raids/guides/${raidId}.html`)
+    fetch(`guides/${raidId}.html`)
         .then(response => {
             if (!response.ok) throw new Error('Guide not found');
             return response.text();

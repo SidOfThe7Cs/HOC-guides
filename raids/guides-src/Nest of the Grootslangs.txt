@@ -1,0 +1,38 @@
+@title Nest Of The Grootslangs
+
+@room Challenge 1:
+
+@subsection Towers
+@text Hold and defend the tower for 60 seconds.
+@tip:shaman Aura can heal you on the tower even when your totem is on the ground.
+
+@subsection Slimey Platform
+@text Hold the platform for 60 seconds.
+@text You can use your movement spell while still in the black screen.
+
+
+@room Challenge 2:
+
+@text This room is guaranteed to be gather slimy goo, there are 3 different direction you can go.
+@text Ideally 1 person does puzzle twice and everyone else does parkour twice each, it is better for one person goes to kill if they have a good enough build.
+
+@subsection Left Puzzle
+
+@subsection Straight Parkour
+@tip:assassin You can use your shadow clone / lacerate even when your movement spell is disabled.
+
+@subsection Right Kill
+
+
+@room Challenge 3:
+
+@subsection Hammer
+@text Whoever takes the hammer can use a walk speed offhand.
+@tip:assassin You can use your shadow clone even when taking hammer.
+
+@subsection Minibosses
+@text Determine who goes up and who goes down beforehand so you dont end up screwing yourselves
+
+
+@room Boss
+@text Worm boi >:3
